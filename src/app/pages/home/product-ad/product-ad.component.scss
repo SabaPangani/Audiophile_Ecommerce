@@ -1,0 +1,41 @@
+.container{
+    width: 1340px;
+    .wrapper{
+        border-radius: 10px;
+        padding-top: 3em;
+        display: flex;
+        align-items: center;
+        background-color: #d97e4a;
+        justify-content: center;
+        column-gap: 250px;
+        img{
+            width: 410px;
+            max-width: 100%;
+        }
+
+        .product-text{
+            width: 100%;
+            max-width: 300px;
+            display: flex;
+            flex-direction: column;
+            h4{
+                color: #fff;
+                font-weight: 700;
+                font-size:3.6rem;
+                line-height: 55px;
+            }
+            p{
+                color: #fff;
+                margin: 70px 0;
+            }
+
+            button{
+                padding:1em 0;
+                background-color: black;
+                color: #fff;
+                font-weight: 700;
+                font-size: .9rem;
+            }
+        }
+    }
+}
