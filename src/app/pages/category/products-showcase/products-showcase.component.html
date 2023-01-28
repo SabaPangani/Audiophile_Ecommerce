@@ -1,13 +1,15 @@
 <div class="container">
     <div class="wrapper">
         <div class="product" *ngFor="let product of products">
-            <img src="{{product.image.desktop}}" alt="{{product.slug}}">
+            <picture>
+                <img src="{{product.image.mobile}}" alt="{{product.slug}}">
+            </picture>
 
             <div class="product-text">
                 <span>NEW PRODUCT</span>
                 <h4>{{product.slug}}</h4>
                 <p>{{product.description}}</p>
-                <button>See product</button>
+                <button [routerLink]="['/details', product.slug]">See product</button>
             </div>
         </div>
     </div>

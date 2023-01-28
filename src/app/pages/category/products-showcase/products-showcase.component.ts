@@ -1,4 +1,4 @@
-import { Component,OnInit } from '@angular/core';
+import { Component,Input,OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { productService } from '../service/product.service';
 
@@ -10,12 +10,13 @@ import { productService } from '../service/product.service';
 export class ProductsShowcaseComponent implements OnInit{
   constructor(private route:ActivatedRoute, private productsService:productService){}
 
-  categoryName:any;
+  categoryName:string = '';
+  @Input() headerName:string = '';
   products:any = [];
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
-        this.categoryName = params.get('category');
+        this.categoryName = params.get('category') ?? '';
         this.products = this.productsService.getProductByCategory(this.categoryName);
     });
   }

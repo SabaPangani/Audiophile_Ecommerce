@@ -5,10 +5,10 @@
                 <img src="https://audiophile-challenge.netlify.app/assets/shared/desktop/logo.svg" alt="" class="logo">
         
                 <ul class="navbar-nav">
-                    <li><a href="">HOME</a></li>
-                    <li><a href="">HEADPHONES</a></li>
-                    <li><a href="">SPEAKERS</a></li>
-                    <li><a href="">EARPHONES</a></li>
+                    <li><a [routerLink]="['']">HOME</a></li>
+                    <li><a [routerLink]="['/category', 'headphones']">HEADPHONES</a></li>
+                    <li><a [routerLink]="['/category', 'speakers']">SPEAKERS</a></li>
+                    <li><a [routerLink]="['/category', 'earphones']">EARPHONES</a></li>
                 </ul>
             </div>
         </div>

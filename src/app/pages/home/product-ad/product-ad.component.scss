@@ -35,6 +35,11 @@
                 color: #fff;
                 font-weight: 700;
                 font-size: .9rem;
+                &:hover{
+                    background-color: #fff;
+                    color: black;
+                    border: none;
+                }
             }
         }
     }

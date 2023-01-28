@@ -13,6 +13,8 @@ import { ProductAdComponent } from './pages/home/product-ad/product-ad.component
 import { BeforeFooterComponent } from './components/before-footer/before-footer.component';
 import { CatHeroComponent } from './pages/category/cat-hero/cat-hero.component';
 import { ProductsShowcaseComponent } from './pages/category/products-showcase/products-showcase.component';
+import { DetailsComponent } from './pages/details/details.component';
+import { ProductInfoComponent } from './pages/details/product-info/product-info.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { ProductsShowcaseComponent } from './pages/category/products-showcase/pr
     BeforeFooterComponent,
     CatHeroComponent,
     ProductsShowcaseComponent,
+    DetailsComponent,
+    ProductInfoComponent,
   ],
   imports: [
     BrowserModule,
