@@ -7,4 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 export class ProductInfoComponent {
   @Input() product:any;
+  productQte:number = 0;
+  
 }

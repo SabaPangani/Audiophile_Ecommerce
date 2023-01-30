@@ -1,16 +1,55 @@
 .container{
+    margin: 100px auto;
     .wrapper{
         display: flex;
-
+        align-items: center;
+        justify-content: space-evenly;
+        picture{
+            img{
+                max-width: 600px;
+            }
+        }
         .product-text{
             color: black;
-            
+            max-width: 550px;
             span{
                 color:#d97e4a;
+                letter-spacing: 4px;
+                font-size: 1.1rem;
             }
             h4{
+                font-size: 3.5rem;
+                font-weight: 700;
             }
-            p{
+            p.price{
+                letter-spacing: 5px;
+                font-weight: 700;
+                span{
+                    color: black;
+                }
+            }
+
+            .cart{
+                display: flex;
+                margin-top: 30px;
+                .quantity{
+                    background-color: #f1f1f1;
+                    padding:.5em 1em;
+                    span{
+                        margin: 0 20px;
+                        color: black;
+                        font-weight: 700;
+                    }
+                }
+
+                button{
+                    margin-left: 30px;
+                    padding: .7em 1.7em;
+                    background-color: #d97e4a;
+                    color: white;
+                    font-weight: 700;
+                    border: none;
+                }
             }
         }
     }

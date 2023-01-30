@@ -15,7 +15,10 @@ import { CatHeroComponent } from './pages/category/cat-hero/cat-hero.component';
 import { ProductsShowcaseComponent } from './pages/category/products-showcase/products-showcase.component';
 import { DetailsComponent } from './pages/details/details.component';
 import { ProductInfoComponent } from './pages/details/product-info/product-info.component';
-
+import { FeaturesComponent } from './pages/details/features/features.component';
+import { ImagesComponent } from './pages/details/images/images.component';
+import { OtherProductComponent } from './pages/details/other-product/other-product.component';
+import { CartComponent } from './components/cart/cart.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +34,10 @@ import { ProductInfoComponent } from './pages/details/product-info/product-info.
     ProductsShowcaseComponent,
     DetailsComponent,
     ProductInfoComponent,
+    FeaturesComponent,
+    ImagesComponent,
+    OtherProductComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,

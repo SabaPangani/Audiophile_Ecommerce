@@ -1,0 +1,31 @@
+.container{
+    .wrapper{
+        display: flex;
+        justify-content: center;
+        column-gap: 50px;
+        .features{
+            max-width: 70%;
+            h4{
+                font-size: 2.5rem;
+                font-weight: 700;
+            }
+        }
+
+        .in-the-box{
+            margin-left: 30px;
+            h4{
+                font-size: 2.5rem;
+                font-weight: 700;
+            }
+            .in-the-box-text{
+                span{
+                    &:first-child{
+                        color:#d97e4ab0;
+                        font-weight: 700;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

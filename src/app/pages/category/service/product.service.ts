@@ -12,7 +12,7 @@ export class productService {
   }
 
   getProductBySlug(slug:string){
-    return products.filter(product => product.slug == slug);
+    return products.find(product => product.slug == slug);
   }
 
   getProductByCategory(cat:string){

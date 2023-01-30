@@ -17,6 +17,7 @@ export class DetailsComponent {
     this.route.paramMap.subscribe(params => {
         this.prodName = params.get('slug') ?? '';
         this.product = this.productsService.getProductBySlug(this.prodName);
+        console.log(this.prodName)
     });
   }
 }

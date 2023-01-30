@@ -32,13 +32,28 @@
             button{
                 padding:1em 0;
                 background-color: black;
+                border: none;
+                position: relative;
                 color: #fff;
                 font-weight: 700;
                 font-size: .9rem;
-                &:hover{
+                z-index: 100;
+                overflow: hidden;
+                &:after{
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                    top: 100%;
                     background-color: #fff;
+                    z-index: -1;
+                }
+                &:hover{
+                    &::after{
+                        top: 0;
+                    }
                     color: black;
-                    border: none;
                 }
             }
         }

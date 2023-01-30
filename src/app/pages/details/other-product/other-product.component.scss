@@ -1,0 +1,25 @@
+.container{
+    .wrapper{
+        display: flex;
+        justify-content: space-evenly;
+        .card{
+            border: none;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            row-gap: 15px;
+            img{
+                max-width: 400px;
+            }
+            button{
+                width: 40%;
+                background-color: #d97e4a;
+                border: none;
+                color: white;
+                font-weight: 700;
+                padding: .9em 1.3em;
+                font-size: .88rem;
+            }
+        }
+    }
+}

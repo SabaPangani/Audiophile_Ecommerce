@@ -10,10 +10,4 @@ export class CatHeroComponent {
   constructor(private route:ActivatedRoute){}
 
   @Input() headerName:string = '';
-
-  ngOnInit(): void {
-    this.route.paramMap.subscribe(params => {
-        this.headerName = params.get('category') ?? '';
-    });
-  }
 }

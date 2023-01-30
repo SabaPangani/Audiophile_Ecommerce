@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="wrapper">
+        <div class="card" *ngFor="let prod of product.others">
+            <picture>
+                <img src="{{prod.image.desktop}}" alt="">
+            </picture>
+            <h4>{{prod.name}}</h4>
+            <button (click)="onButtonClick()" [routerLink]="['/details', prod.slug]">SEE PRODUCT</button>
+        </div>
+    </div>
+</div>

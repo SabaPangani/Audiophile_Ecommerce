@@ -6,10 +6,20 @@
 
         <div class="product-text">
             <span>NEW PRODUCT</span>
-            <h4>XX99 Mark II Headphones</h4>
-            <p>The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.</p>
+            <h4>{{product.name}}</h4>
+            <p>{{product.description}}</p>
 
-            
+            <p class="price">$<span style="margin-left: 5px;">{{product.price}}</span></p>
+
+            <div class="cart">
+                <div class="quantity">
+                    <i class="bi bi-dash"></i>
+                    <span>0</span>
+                    <i class="bi bi-plus"></i>
+                </div>
+
+                <button>ADD TO CART</button>
+            </div>
         </div>
     </div>
 </div>
