@@ -1,9 +1,0 @@
-<div class="container">
-    <div class="card" *ngFor="let product of products" [routerLink]="['/category', product.name]">
-        <img class="main" src="{{product.imgPath}}" alt="">
-        <h4>{{product.name}}</h4>
-        <a [routerLink]="['/category', product.name]">SHOP
-            <img src="https://audiophile-challenge.netlify.app/assets/shared/desktop/icon-arrow-right.svg" alt="">
-        </a>
-    </div>
-</div>

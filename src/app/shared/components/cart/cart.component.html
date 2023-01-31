@@ -1,29 +1,33 @@
-<div class="container">
+<div class="cart-container">
     <div class="wrapper">
         <div class="cart-header">
-            <span>CART(1)</span>
-            <span style="text-decoration:underline;">Remove All</span>
+            <span>CART({{cart.length}})</span>
+            <span style="text-decoration:underline; cursor: pointer;" (click)="removeAll()">Remove All</span>
         </div>
 
-        <div class="products">
-            <img src="https://audiophile-challenge.netlify.app/assets/product-yx1-earphones/mobile/image-product.jpg" alt="">
-            <div class="product-desc">
-                <span>YX1 Wireless Earphones</span>
-                <span>$ 599</span>
-
-                <div class="quantity">
+        <div class="products" *ngIf="cart.length">
+            <div class="product" *ngFor="let product of cart">
+                <img src="{{product.image.mobile}}" alt="">
+                <div class="product-desc d-flex flex-column">
+                    <span>{{product.name}}</span>
+                    <span>$ {{product.price}}</span>
+                </div>
+                <div class="quantity d-flex">
                     <div class="bi bi-dash"></div>
-                    <span>0</span>
+                    <span>{{product.qte}}</span>
                     <div class="bi bi-plus"></div>
                 </div>
             </div>
         </div>
 
-        <div class="cart-footer">
-            <span>TOTAl</span>
-            <span>$599</span>
+        <h1 *ngIf="!cart.length">CART IS EMPTY</h1>
 
-            <button>CHECKOUT</button>
+        <div class="cart-footer">
+            <span>TOTAL</span>
+            <span>$ {{total}}</span>
         </div>
+
+        <button>CHECKOUT</button>
+
     </div>
 </div>

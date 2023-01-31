@@ -11,7 +11,7 @@ export class DetailsComponent {
   constructor(private route:ActivatedRoute, private productsService:productService){}
 
   prodName:string = '';
-  @Input() product:any = [];
+  product:any = [];
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {

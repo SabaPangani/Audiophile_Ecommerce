@@ -13,12 +13,12 @@
 
             <div class="cart">
                 <div class="quantity">
-                    <i class="bi bi-dash"></i>
-                    <span>0</span>
-                    <i class="bi bi-plus"></i>
+                    <i class="bi bi-dash" style="cursor: pointer;" (click)="decQte()"></i>
+                    <span>{{productQte}}</span>
+                    <i class="bi bi-plus" style="cursor: pointer;" (click)="addQte()"></i>
                 </div>
 
-                <button>ADD TO CART</button>
+                <button (click)="addToCart(product)">ADD TO CART</button>
             </div>
         </div>
     </div>

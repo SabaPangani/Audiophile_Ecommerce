@@ -1,0 +1,84 @@
+.cart-container{
+    max-width: 450px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        position: relative;
+        .cart-header{
+            display: flex;
+            justify-content: space-between;
+
+            span{
+                color: black;
+                font-weight: 700;
+                font-size: 1.4rem;
+                &:last-child{
+                    color: gray;
+                    font-weight: 500;
+                }
+            }
+        }
+        h1{
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-align: center;
+            padding-top: 20px;
+        }
+        .products{
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+           .product{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                column-gap: 20px;
+                img{
+                    width: 80px;
+                }
+                .product-desc{
+                    span{
+                        font-weight: 700;
+                    }
+                }
+                .quantity{
+                    background-color: #f1f1f1;
+                    min-width: 76px;
+                    height: 32px;
+                    display: flex;
+                    align-items: center;
+                    padding: 0 8px;
+                    justify-content: space-between;
+                }
+           }
+        }
+
+        .cart-footer{
+            display: flex;
+            justify-content: space-between;
+
+            span{
+                color: gray;
+                font-weight: 500;
+                font-size: 1.5rem;
+                &:last-child{
+                    color: black;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        button{
+            color: #fff;
+            font-weight: 700;
+            font-size: .9rem;
+            padding: .7em 1.2em;
+            background-color: #d97e4a;
+            border: none;
+        }
+    }
+}
