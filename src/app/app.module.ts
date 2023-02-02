@@ -21,6 +21,8 @@ import { OtherProductComponent } from './pages/details/other-product/other-produ
 import { CartComponent } from './shared/components/cart/cart.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
+import { CheckoutComponent } from './pages/checkout/checkout.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,12 +42,14 @@ import { MatDialogModule } from '@angular/material/dialog';
     ImagesComponent,
     OtherProductComponent,
     CartComponent,
+    CheckoutComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    MatDialogModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,11 +1,20 @@
 <div class="container">
     <div class="wrapper">
-        <img src="https://audiophile-challenge.netlify.app/assets/home/desktop/image-speaker-zx9.png" alt="">
+        <div class="product product-1">
+            <img src="https://audiophile-challenge.netlify.app/assets/home/desktop/image-speaker-zx9.png" alt="">
 
-        <div class="product-text">
-            <h4>ZX9 speaker</h4>
-            <p>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
-            <button [routerLink]="['/details', 'zx9-speaker']">SEE PRODUCT</button>
+            <div class="product-text">
+                <h4>ZX9 speaker</h4>
+                <p>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
+                <button [routerLink]="['/details', 'zx9-speaker']" class="button-1">SEE PRODUCT</button>
+            </div>
+        </div>
+        <div class="product product-2">
+
+            <div class="product-text">
+                <h4>ZX7 speaker</h4>
+                <button [routerLink]="['/details', 'zx7-speaker']" class="button-2">SEE PRODUCT</button>
+            </div>
         </div>
     </div>
 </div>

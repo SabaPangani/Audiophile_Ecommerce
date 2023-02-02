@@ -18,9 +18,32 @@ export class CartComponent implements OnInit {
     console.log(this.cart)
   }
 
+  addQte(product:any){
+    const index = this.cart.findIndex(prod => prod.id === product.id);
+    if (index === -1) return;
+
+    this.cart[index].qte += 1;
+
+    localStorage.setItem("products", JSON.stringify(this.cart));
+    this.total += product.price;
+  }
+
+  decQte(product:any){
+    const index = this.cart.findIndex(prod => prod.id === product.id);
+    if (index === -1) return;
+
+    this.cart[index].qte -= 1;
+
+    if (this.cart[index].qte <= 0) {
+      this.cart.splice(index, 1);
+    }
+    localStorage.setItem("products", JSON.stringify(this.cart));
+    this.total -= product.price;
+  }
+
   calculateTotal(){
     this.cart.forEach((product:any) => {
-      this.total = product.price * product.qte;
+      this.total += product.price * product.qte;
     })
   }
 

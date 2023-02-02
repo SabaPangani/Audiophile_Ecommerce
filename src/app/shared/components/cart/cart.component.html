@@ -7,15 +7,15 @@
 
         <div class="products" *ngIf="cart.length">
             <div class="product" *ngFor="let product of cart">
-                <img src="{{product.image.mobile}}" alt="">
+                <img src="{{product.image}}" alt="">
                 <div class="product-desc d-flex flex-column">
                     <span>{{product.name}}</span>
                     <span>$ {{product.price}}</span>
                 </div>
                 <div class="quantity d-flex">
-                    <div class="bi bi-dash"></div>
+                    <div class="bi bi-dash" (click)="decQte(product)"></div>
                     <span>{{product.qte}}</span>
-                    <div class="bi bi-plus"></div>
+                    <div class="bi bi-plus" (click)="addQte(product)"></div>
                 </div>
             </div>
         </div>
@@ -27,7 +27,9 @@
             <span>$ {{total}}</span>
         </div>
 
-        <button>CHECKOUT</button>
+        <button *ngIf="!cart.length" disabled>CHECKOUT</button>
+        <button [routerLink]="['/checkout']" *ngIf="cart.length">CHECKOUT</button>
+
 
     </div>
 </div>

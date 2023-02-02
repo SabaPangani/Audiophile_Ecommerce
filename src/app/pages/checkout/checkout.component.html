@@ -1,0 +1,117 @@
+<div class="header"></div>
+
+<div class="background">
+    <div class="checkout-container">
+        <div class="wrapper">
+            <form class="checkout" #form="ngForm" [formGroup]="checkoutForm" (ngSubmit)="onFormSubmit()">
+                <h2>CHECKOUT</h2>
+
+                <div class="card" formGroupName="billing">
+                    <h3>Billing Details</h3>
+    
+                    <div class="card-inputs">
+                        <label class="input-field">
+                            <span>Name</span>
+                            <input type="text" placeholder="Karim Bourass" formControlName="name" />
+                        </label>
+                        <label class="input-field">
+                            <span>Email Address</span>
+                            <input type="text" placeholder="bourasskarim9@gmail.com" formControlName="email"/>
+                        </label>
+                        <label class="input-field">
+                            <span>Phone Number</span>
+                            <input type="text" placeholder="+1 202-555-0136" formControlName="phone" />
+                        </label>
+                    </div>
+                </div>
+    
+                <div class="card" formGroupName="shipping">
+                    <h3>Shipping Info</h3>
+    
+                    <div class="card-inputs">
+                        <label class="input-field address" >
+                            <span>Address</span>
+                            <input type="text" placeholder="1137 Williams Avenue" formControlName="address" />
+                        </label>
+                        <label class="input-field">
+                            <span>ZIP Code</span>
+                            <input type="text" placeholder="10001" formControlName="zipCode" />
+                        </label>
+                        <label class="input-field">
+                            <span>City</span>
+                            <input type="text" placeholder="New York" formControlName="city" />
+                        </label>
+                        <label class="input-field">
+                            <span>Country</span>
+                            <input type="text" placeholder="United States" formControlName="country" />
+                        </label>
+                    </div>
+                </div>
+    
+    
+                <div class="card" formGroupName="payment">
+                    <h3>Payment Details</h3>
+                    <div class="card-inputs payment">
+            
+                      <div class="payment">
+                        <span>Payment Method</span>
+                        <label class="payment-options first">
+                          <input name="eMoney" type="radio" formControlName="eMoney"/>
+                          <span>e-Money</span>
+                        </label>
+                        <label class="payment-options">
+                          <input name="delivery" type="radio" formControlName="delivery"/>
+                          <span>Cash on Delivery</span>
+                        </label>
+                      </div>
+                      <div class="eMoney-field">
+                        <label class="input-field">
+                            <span>e-Money Number</span>
+                            <input type="number" placeholder="238521993" formControlName="eNumber"/>
+                          </label>
+                          <label class="input-field">
+                            <span>e-Money PIN</span>
+                            <input type="number" placeholder="6891" formControlName="ePin"/>
+                          </label>
+                      </div>
+                    </div>
+                  </div>
+                  <button *ngIf="!form.valid" disabled>CONTINUE & PAY</button>
+                  <button *ngIf="form.valid">CONTINUE & PAY</button>
+
+            </form>  
+            <div class="summary-container">
+                <div class="summary-wrapper">
+                    <h4>Summary</h4>
+            
+                    <div class="products">
+                        <div class="product" *ngFor="let product of summaryProducts">
+                            <img src="{{product.image}}" alt="">
+                            <div class="product-desc d-flex flex-column">
+                                <span>{{product.name}}</span>
+                                <span>$ {{product.price}}</span>
+                            </div>
+                            <div class="quantity d-flex">
+                                <span>x{{product.qte}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="total det">
+                            <span>TOTAL</span>
+                            <span>$ {{total}}</span>
+                        </div>
+                        <div class="shipping det">
+                            <span>Shipping</span>
+                            <span>$ 50</span>
+                        </div>
+                        <div class="grand-total det">
+                            <span>Grand TOTAL</span>
+                            <span>$ {{grandTotal}}</span>
+                        </div>
+                    </div>            
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
