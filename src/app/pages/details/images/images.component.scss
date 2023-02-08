@@ -4,6 +4,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    column-gap: 30px;
     .small{
         display: flex;
         flex-direction: column;
@@ -11,8 +12,7 @@
     }
     img{
         border-radius: 10px;
-    }
-    .big-img{
-        width: 50%;
+        max-width: 100%;
+
     }
 }

@@ -2,6 +2,11 @@
     .wrapper{
         display: flex;
         justify-content: space-evenly;
+        column-gap: 30px;
+        @media only screen and (max-width:768px) {
+            flex-direction: column;
+            row-gap: 40px;
+        }
         .card{
             border: none;
             text-align: center;
@@ -9,6 +14,7 @@
             align-items: center;
             row-gap: 15px;
             img{
+                width: 100%;
                 max-width: 400px;
             }
             h4{

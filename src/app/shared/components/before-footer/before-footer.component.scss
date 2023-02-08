@@ -1,11 +1,13 @@
 .container{
-    width: 1270px;
+    width: 100%;
+    max-width: 1270px;
     margin: 180px auto;
     .wrapper{
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+        column-gap: 50px;
         .before-text{
             width: 100%;
             max-width: 480px;
@@ -19,6 +21,25 @@
             }
             p{
                 color: #969696;
+            }
+        }
+    }
+
+    img{
+        width: 100%;
+        max-width: 500px;
+    }
+}
+
+@media only screen and (max-width:1020px)  {
+    .wrapper{
+        flex-direction: column-reverse !important;
+        row-gap: 30px;
+        .before-text{
+            max-width: 90% !important;
+            text-align: center;
+            .main{
+                font-size: 3rem !important;
             }
         }
     }

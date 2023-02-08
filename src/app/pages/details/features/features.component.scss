@@ -1,26 +1,41 @@
-.container{
-    .wrapper{
+.container {
+    .wrapper {
         display: flex;
         justify-content: center;
         column-gap: 50px;
-        .features{
+        @media only screen and (max-width:1024px) {
+            flex-direction: column;
+            justify-content: flex-start;
+            row-gap: 20px;
+        }
+        .features {
             max-width: 70%;
-            h4{
+
+            @media only screen and (max-width:1024px) {
+                max-width: 100%;
+            }
+            h4 {
                 font-size: 2.5rem;
                 font-weight: 700;
             }
         }
 
-        .in-the-box{
+        .in-the-box {
             margin-left: 30px;
-            h4{
+
+            @media only screen and (max-width:1024px) {
+                margin-left: 0;
+            }
+            h4 {
                 font-size: 2.5rem;
                 font-weight: 700;
+                line-height: 40px;
             }
-            .in-the-box-text{
-                span{
-                    &:first-child{
-                        color:#d97e4ab0;
+
+            .in-the-box-text {
+                span {
+                    &:first-child {
+                        color: #d97e4ab0;
                         font-weight: 700;
                         margin-right: 10px;
                     }

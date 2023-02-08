@@ -6,6 +6,10 @@ footer{
         display: flex;
         flex-direction: column;
         row-gap: 45px;
+
+        @media only screen and (max-width:768px)  {
+            align-items: center;
+        }
         .foot-nav{
             width: 100%;
             max-width: 1440px;
@@ -14,6 +18,17 @@ footer{
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
+
+            @media only screen and (max-width:1024px)  {
+                margin: auto;
+                flex-direction: column;
+                align-items: flex-start;
+                row-gap: 20px;
+            }
+
+            @media only screen and (max-width:768px)  {
+                align-items: center;
+            }
             .logo{
                 height: 100%;
             }
@@ -22,12 +37,16 @@ footer{
                 flex-direction: row;
                 list-style: none;  
                 column-gap: 24px;    
-                
+                @media only screen and (max-width:768px)  {
+                    flex-direction: column;
+                    text-align: center;
+                    row-gap: 20px;
+                }
                 li{
                     a{
                         color: white;
                         text-decoration: none;
-                        font-size: 1.05rem;
+                        font-size: .9rem;
                         transition: .3s;
                         &:hover{
                             color: #d97e4a;
@@ -45,17 +64,27 @@ footer{
     p{
         width: 100%;
         max-width: 700px;
+        color: #909090;
+        @media only screen and (max-width:768px)  {
+            text-align: center;
+        }
     }
 
     .rights-socials{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-
+        @media only screen and (max-width:768px)  {
+            flex-direction: column;
+            align-items: center;
+        }
 
         .socials{
             img{
-                margin-right: 15px;
+                margin-right: 10px;
+                @media only screen and (max-width:768px)  {
+                    margin-right: 20px;
+                }
             }
         }
     }
@@ -68,7 +97,7 @@ footer{
         
         a{
             text-decoration: none;
-            color: #fff;
+            color: #909090;
             i{
                 font-size: 2rem;
             }

@@ -8,8 +8,12 @@ import { ModalService } from 'src/app/shared/components/services/services.servic
 })
 export class NavComponent {
   constructor(private modalService:ModalService){}
-
+  mobileMenu:boolean = false; 
   openCart(){
     this.modalService.openCartDialog();
+  }
+
+  showMobileMenu(){
+    this.mobileMenu = !this.mobileMenu;
   }
 }

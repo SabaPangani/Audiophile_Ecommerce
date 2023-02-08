@@ -1,4 +1,4 @@
-nav{
+nav {
     width: 100%;
     max-width: 1440px;
     left: 50%;
@@ -8,36 +8,85 @@ nav{
     padding: 0 20px;
     padding-bottom: 20px;
     position: absolute;
-    .navbar{
+
+    .navbar {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        .logo{
+
+        .bi-list {
+            display: none;
+
+            @media only screen and (max-width:768px) {
+                display: block;
+            }
+        }
+
+        .logo {
             height: 100%;
         }
-        .navbar-nav{
+
+        .navbar-nav {
             display: flex;
             flex-direction: row;
-            list-style: none;  
-            column-gap: 24px;    
-            
-            li{
-                a{
+            list-style: none;
+            column-gap: 24px;
+
+            @media only screen and (max-width:768px) {
+                display: none;
+            }
+
+            li {
+                a {
                     color: white;
                     text-decoration: none;
                     font-size: 1.05rem;
                     transition: .3s;
-                    &:hover{
+
+                    &:hover {
                         color: #d97e4a;
                     }
                 }
             }
         }
 
-        i{
+        i {
             color: white;
             font-size: 1.5rem;
+        }
+
+        .mobile-container {
+            width: 100vw;
+            background-color: rgb(255, 255, 255);
+            position: absolute;
+            left: -20px;
+            top: 60px;
+            border-radius: 20px;
+            .wrapper {
+                padding: 2em;
+                ul{
+                    padding: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    row-gap: 30px;
+                    list-style:none;
+                    li {
+                        a {
+                            color: black;
+                            text-decoration: none;
+                            font-size: 1.3rem;
+                            font-weight: 700;
+                            transition: .3s;
+                            &:hover {
+                                color: #d97e4a;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

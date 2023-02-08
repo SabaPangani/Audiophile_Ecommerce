@@ -1,5 +1,17 @@
 <nav>
     <div class="navbar">
+        <i class="bi bi-list" (click)="showMobileMenu()"></i>
+
+        <div *ngIf="mobileMenu" class="mobile-container">
+            <div class="wrapper">
+                <ul>
+                    <li><a [routerLink]="['']">HOME</a></li>
+                    <li><a [routerLink]="['/category', 'headphones']">HEADPHONES</a></li>
+                    <li><a [routerLink]="['/category', 'speakers']">SPEAKERS</a></li>
+                    <li><a [routerLink]="['/category', 'earphones']">EARPHONES</a></li>
+                </ul>
+            </div>
+        </div>
         <img src="https://audiophile-challenge.netlify.app/assets/shared/desktop/logo.svg" alt="" class="logo">
 
         <ul class="navbar-nav">

@@ -12,6 +12,13 @@
     width: 100%;
     max-width: 1440px;
     margin: auto;
+    padding: 0 2rem;
+}
+.padding-x{
+    padding: 0 3rem;
+}
+.padding-m{
+    padding: 0 2rem;
 }
 input {
     height: 56px;
@@ -20,6 +27,10 @@ input {
     font-weight: 700;
     border-radius: 8px;
     outline-color: hsl(22, 65%, 57%);
+}
+
+html{
+    overflow-x: hidden;
 }
 
 .button-2 {

@@ -1,5 +1,6 @@
 .container {
-    width: 1340px;
+    width: 100%;
+    max-width: 1340px;
 
     .wrapper {
         display: flex;
@@ -7,16 +8,23 @@
         row-gap: 30px;
         .product {
             border-radius: 10px;
-            padding-top: 3em;
+            padding: 3em;
             display: flex;
             align-items: center;
             background-color: #d97e4a;
             justify-content: center;
             column-gap: 250px;
-
+            @media only screen and (max-width:1020px)  {
+                flex-direction: column;
+                row-gap: 30px;
+                padding-bottom: 2em;
+            }
             img {
                 width: 410px;
                 max-width: 100%;
+                @media only screen and (max-width:1020px)  {
+                    width: 300px;
+                }
             }
 
             .product-text {
@@ -30,11 +38,21 @@
                     font-weight: 700;
                     font-size: 3.6rem;
                     line-height: 55px;
+
+                    @media only screen and (max-width:1020px)  {
+                        font-size: 3rem;
+                    }
+                    
                 }
 
                 p {
                     color: #fff;
                     margin: 70px 0;
+
+                    @media only screen and (max-width:1020px)  {
+                        margin: 20px 0;
+                        font-size: .9rem;
+                    }
                 }
 
                 button {
