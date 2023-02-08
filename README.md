@@ -1,6 +1,6 @@
 # NOT FINISHED WORKING ON RESPONSIVE AND NEEDS LITTLE WORK ON CHECKOUT
 
-# Live link for preview https://sabapangani.github.io/Audophile_Ecommerce/
+## Live link for preview https://sabapangani.github.io/Audophile_Ecommerce/
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.3.
 
