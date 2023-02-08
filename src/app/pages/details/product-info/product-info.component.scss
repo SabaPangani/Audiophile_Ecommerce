@@ -1,20 +1,37 @@
 .container {
     margin: 100px auto;
 
+    @media only screen and (max-width:768px) {
+        margin:50px auto;
+    }
     .wrapper {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
         column-gap: 30px;
-
+        @media only screen and (max-width:768px) {
+            flex-direction: column;
+            row-gap: 20px;
+            align-items: flex-start;
+            row-gap: 40px;
+        }
         .img-div {
-            min-height: 52.5vh;
+            height: 52.5vh;
             width: 40%;
             min-width: 400px;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            border-radius: 10px;
+            @media only screen and (max-width:768px) {
+                width: 100%;
+                min-width: 100px;
+                height: 40vh;
+            }
 
+            @media only screen and (max-width:468px) {
+                height: 30vh;
+            }
         }
 
         .product-text {

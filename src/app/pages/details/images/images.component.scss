@@ -5,14 +5,26 @@
     justify-content: space-around;
     align-items: center;
     column-gap: 30px;
+
+    @media only screen and (max-width:768px) {
+        flex-direction: column;
+        row-gap: 20px;
+    }
     .small{
         display: flex;
         flex-direction: column;
         row-gap: 20px;
+
+        @media only screen and (max-width:768px) {
+            width: 90%;
+        }
     }
     img{
         border-radius: 10px;
         max-width: 100%;
 
+        @media only screen and (max-width:768px) {
+            width: 100%;
+        }
     }
 }

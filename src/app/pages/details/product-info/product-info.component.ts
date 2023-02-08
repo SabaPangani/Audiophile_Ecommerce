@@ -39,19 +39,19 @@ export class ProductInfoComponent implements OnInit {
       }
 
       if (!oldCart.length) {
-        newCart = [toStore]
-        localStorage.setItem('products', JSON.stringify(newCart))
+        newCart = [toStore];
+        localStorage.setItem('products', JSON.stringify(newCart));
       }
       else {
         oldCart.forEach((pct: any) => {
           if (pct.id == product.id) {
-            pct.qte = pct.qte + this.productQte
-            newCart = [...oldCart]
-            localStorage.setItem('products', JSON.stringify(newCart))
+            pct.qte += this.productQte;
+            newCart = [...oldCart];
+            localStorage.setItem('products', JSON.stringify(newCart));
           }
           else {
-            newCart = [...oldCart, toStore]
-            localStorage.setItem('products', JSON.stringify(newCart))
+            newCart = [...oldCart, toStore];
+            localStorage.setItem('products', JSON.stringify(newCart));
           }
         });
       }
