@@ -50,7 +50,9 @@
                 font-weight: 700;
                 line-height: 60px;
 
-
+                @media only screen and (max-width:320px) {
+                    font-size: 3rem;
+                }
             }
 
             p.price {
@@ -70,7 +72,10 @@
                     background-color: #f1f1f1;
                     padding: .5em 1em;
                     user-select: none;
-
+                    @media only screen and (max-width:320px) {
+                        display: flex;
+                        align-items: center;
+                    }
                     span {
                         margin: 0 20px;
                         color: black;

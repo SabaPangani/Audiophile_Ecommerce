@@ -9,7 +9,7 @@
             <div class="product" *ngFor="let product of cart">
                 <img src="{{product.image}}" alt="">
                 <div class="product-desc d-flex flex-column">
-                    <span>{{product.name}}</span>
+                    <span>{{product.name | slice : 0 : 3}}</span>
                     <span>$ {{product.price}}</span>
                 </div>
                 <div class="quantity d-flex">

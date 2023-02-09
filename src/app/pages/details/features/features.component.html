@@ -2,13 +2,13 @@
     <div class="wrapper">
         <div class="features">
             <h4>FEATURES</h4>
-            <p>{{product.features}}</p>
+            <p class="text-secondary">{{product.features}}</p>
         </div>
         <div class="in-the-box d-flex flex-column">
             <h4>IN THE BOX</h4>
             <div class="in-the-box-text d-flex" *ngFor="let info of product.includes">
                 <span>{{info.quantity}}x</span>
-                <span>{{info.item}}</span>
+                <span class="text-secondary">{{info.item}}</span>
             </div>
         </div>
     </div>
