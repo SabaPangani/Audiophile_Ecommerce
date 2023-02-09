@@ -20,6 +20,7 @@
             @media screen and (max-width: 768px) {
                 grid-template-columns: 1fr;
             }
+
             .checkout {
                 border-radius: 20px;
                 background-color: #fff;
@@ -115,14 +116,19 @@
                             display: grid;
                             grid-template-columns: 1fr 1fr;
                             gap: 20px;
+
                             @media screen and (max-width: 768px) {
                                 grid-template-columns: 1fr;
                             }
+
                             .input-field {
                                 grid-column: 2/2;
+
                                 @media screen and (max-width: 768px) {
-                                    grid-column: 1/1;;
+                                    grid-column: 1/1;
+                                    ;
                                 }
+
                                 &:first-child {
                                     grid-column: 1/1;
                                 }
@@ -137,13 +143,16 @@
 }
 
 .summary-container {
-        margin-bottom: 28px;
-        .summary-wrapper {
+    margin-top: 28px;
+    margin-bottom: 56px;
+
+    .summary-wrapper {
         background-color: white;
         border-radius: 20px;
         padding: 3em;
         display: flex;
         flex-direction: column;
+
         h4 {
             font-size: 1.3rem;
         }
