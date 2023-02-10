@@ -1,4 +1,5 @@
 import { Component,Input } from '@angular/core';
+import { Product } from 'src/app/shared/models/product';
 
 @Component({
   selector: 'app-products-showcase',
@@ -6,5 +7,5 @@ import { Component,Input } from '@angular/core';
   styleUrls: ['./products-showcase.component.scss']
 })
 export class ProductsShowcaseComponent{
-  @Input() products:any
+  @Input() products: Product[] = [];
 }

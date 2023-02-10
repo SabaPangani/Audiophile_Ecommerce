@@ -23,6 +23,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FinalDialogComponent } from './pages/checkout/final-dialog/final-dialog.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,6 +44,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     OtherProductComponent,
     CartComponent,
     CheckoutComponent,
+    FinalDialogComponent,
   ],
   imports: [
     BrowserModule,

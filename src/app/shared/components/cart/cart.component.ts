@@ -1,6 +1,7 @@
 import { animate } from '@angular/animations';
 import { JsonPipe } from '@angular/common';
 import { Component,OnInit } from '@angular/core';
+import { Product } from '../../models/product';
 
 @Component({
   selector: 'app-cart',
@@ -8,7 +9,7 @@ import { Component,OnInit } from '@angular/core';
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit {
-  cart:any[] = [];
+  cart:Product[] = [];
   total:number = 0;
 
 

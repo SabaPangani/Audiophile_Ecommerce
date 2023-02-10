@@ -3,7 +3,7 @@
 <div class="background">
     <div class="checkout-container">
         <div class="wrapper">
-            <form class="checkout" #form="ngForm" [formGroup]="checkoutForm" (ngSubmit)="onFormSubmit()">
+            <form class="checkout" #form="ngForm" [formGroup]="checkoutForm" (ngSubmit)="onSubmit($event)">
                 <h2>CHECKOUT</h2>
 
                 <div class="card" formGroupName="billing">
@@ -76,7 +76,7 @@
                       </div>
                     </div>
                   </div>
-                  <button *ngIf="!form.valid" disabled>CONTINUE & PAY</button>
+                  <button *ngIf="!form.valid">CONTINUE & PAY</button>
                   <button *ngIf="form.valid">CONTINUE & PAY</button>
 
             </form>  

@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { ViewportScroller } from '@angular/common';
+import { Product } from 'src/app/shared/models/product';
 
 
 @Component({
@@ -8,7 +9,7 @@ import { ViewportScroller } from '@angular/common';
   styleUrls: ['./other-product.component.scss']
 })
 export class OtherProductComponent {
-  @Input() product:any;
+  @Input() product!:Product;
 
   constructor(private viewportScroller: ViewportScroller) { }
 

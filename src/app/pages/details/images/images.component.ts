@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { Product } from 'src/app/shared/models/product';
+import { productService } from '../../category/service/product.service';
 
 
 @Component({
@@ -7,5 +9,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./images.component.scss']
 })
 export class ImagesComponent {
-  @Input() product:any;
+  @Input() product!:Product;
 }

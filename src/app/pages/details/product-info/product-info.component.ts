@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ModalService } from 'src/app/shared/components/services/services.service';
+import { Product } from 'src/app/shared/models/product';
 @Component({
   selector: 'app-product-info',
   templateUrl: './product-info.component.html',
@@ -7,7 +8,7 @@ import { ModalService } from 'src/app/shared/components/services/services.servic
 })
 export class ProductInfoComponent implements OnInit {
   
-  @Input() product:any;
+  @Input() product!:Product;
   @Input() productQte:number = 0;
 
   constructor(private modalService:ModalService){}

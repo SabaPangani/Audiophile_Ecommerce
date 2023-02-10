@@ -1,0 +1,26 @@
+<div class="dialog-container">
+    <div class="wrapper">
+        <h4>Thank you for your order</h4>
+
+        <span>You will receive an email confirmation shortly.</span>
+        <div class="items">
+
+            <div class="items-body">
+                <img src="https://audiophile-challenge.netlify.app/assets/product-yx1-earphones/mobile/image-product.jpg"
+                    alt="">
+                <div class="info">
+                    <span class="name">{{cart[0].name}}</span>
+                    <span class="money">$ {{cart[0].price}}</span>
+                    <span>and {{cart.length - 1}} other item(s)</span>
+                </div>
+
+                <div class="total">
+                    <span>GRAND TOTAL</span>
+                    <span>$ {{grandTotal}}</span>
+                </div>
+            </div>
+        </div>
+
+        <button class="button" [routerLink]="['/']">BACK TO HOME</button>
+    </div>
+</div>

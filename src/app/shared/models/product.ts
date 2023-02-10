@@ -1,4 +1,5 @@
 export interface Product {
+    qte:           number;
     id:            number;
     slug:          string;
     name:          string;

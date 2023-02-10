@@ -1,7 +1,8 @@
 import { TmplAstRecursiveVisitor } from '@angular/compiler';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-
+import { ModalService } from 'src/app/shared/components/services/services.service';
+import { Product } from 'src/app/shared/models/product';
 @Component({
   selector: 'app-checkout',
   templateUrl: './checkout.component.html',
@@ -10,10 +11,12 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class CheckoutComponent {
 
   checkoutForm:FormGroup = new FormGroup({});
-  summaryProducts:any[] = [];
+  summaryProducts:Product[] = [];
   total:number = 0;
   grandTotal:number = 0;
 
+  constructor(private _orderDialog:ModalService){}
+  
   ngOnInit(){
     this.createForm();
     this.summaryProducts = JSON.parse(localStorage.getItem("products") || "[]");
@@ -47,13 +50,15 @@ export class CheckoutComponent {
     });
   }
 
-  onFormSubmit(){
-    console.log(this.checkoutForm.value)
-  }
   calculateTotal(){
     this.summaryProducts.forEach((product:any) => {
       this.total += product.price * product.qte;
       this.grandTotal += product.price * product.qte + 50;
     })
+  }
+
+  onSubmit(grandTotal:number){
+    console.log(this.checkoutForm.value)
+    this._orderDialog.openFinalOrderDialog(grandTotal);
   }
 }
