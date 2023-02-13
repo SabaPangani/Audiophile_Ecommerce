@@ -9,9 +9,8 @@ main {
     align-items: center;
     justify-content: center;
     position: relative;
-    z-index: -1 !important;
+    z-index: 0 !important;
     .hero-text {
-        z-index: 0 !important;
         display: flex;
         align-items: center;
         flex-direction: column;
