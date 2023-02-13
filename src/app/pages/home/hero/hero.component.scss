@@ -2,20 +2,20 @@ main {
     background-image: url(https://audiophile-challenge.netlify.app/image-hero.55c18e980adf7658ae26.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position-x: center;
     background-position-y: 70%;
     height: 850px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: -1 !important;
     .hero-text {
+        z-index: 0 !important;
         display: flex;
         align-items: center;
         flex-direction: column;
-        z-index: 0;
-        position: absolute;
-        left: 50%;
-        top: 30%;
-        transform: translate(-50%, -30%);
         text-align: center;
-        z-index: 0;
-
         span {
             color: #969696;
             letter-spacing: 3px;

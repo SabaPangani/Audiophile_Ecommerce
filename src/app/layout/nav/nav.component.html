@@ -1,20 +1,21 @@
 <nav>
     <div class="navbar">
-        <i class="bi bi-list" (click)="showMobileMenu()"></i>
+        <i *ngIf="showBurgerMenu" class="bi bi-list" (click)="showMobileMenu()"></i>
 
         <div *ngIf="mobileMenu" class="mobile-container">
-            <div class="wrapper">
-                <ul>
-                    <li><a [routerLink]="['']">HOME</a></li>
-                    <li><a [routerLink]="['/category', 'headphones']">HEADPHONES</a></li>
-                    <li><a [routerLink]="['/category', 'speakers']">SPEAKERS</a></li>
-                    <li><a [routerLink]="['/category', 'earphones']">EARPHONES</a></li>
-                </ul>
+            <div class="container">
+                <div class="card" *ngFor="let product of products" [routerLink]="['/category', product.name]">
+                    <img class="main" src="{{product.imgPath}}" alt="">
+                    <h4>{{product.name}}</h4>
+                    <a [routerLink]="['/category', product.name]">SHOP
+                        <img src="https://audiophile-challenge.netlify.app/assets/shared/desktop/icon-arrow-right.svg" alt="">
+                    </a>
+                </div>
             </div>
         </div>
         <img src="https://audiophile-challenge.netlify.app/assets/shared/desktop/logo.svg" alt="" class="logo">
 
-        <ul class="navbar-nav">
+        <ul *ngIf="showNav" class="navbar-nav">
             <li><a [routerLink]="['']">HOME</a></li>
             <li><a [routerLink]="['/category', 'headphones']">HEADPHONES</a></li>
             <li><a [routerLink]="['/category', 'speakers']">SPEAKERS</a></li>

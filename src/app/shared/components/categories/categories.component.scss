@@ -4,11 +4,12 @@
     flex-direction: row;
     justify-content: space-between;
     column-gap: 30px;
+    z-index: 99999999999;
     @media only screen and (max-width:768px)  {
         flex-direction: column;
         row-gap: 90px;
         align-items: center;
-        margin: 150px 0;
+        margin: 100px 0;
     }
     .card{
         width: 100%;
