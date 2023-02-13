@@ -2,6 +2,8 @@
 
 ## Live link for preview https://sabapangani.github.io/Audophile_Ecommerce/
 
+I don't have access to figma files so design is not pixel perfect
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.3.
 
 ## Development server
