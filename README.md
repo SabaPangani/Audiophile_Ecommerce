@@ -1,4 +1,4 @@
-# NOT FINISHED WORKING ON RESPONSIVE AND NEEDS LITTLE WORK ON CHECKOUT
+# NEEDS LITTLE WORK ON CHECKOUT
 
 ## Live link for preview https://sabapangani.github.io/Audophile_Ecommerce/
 
