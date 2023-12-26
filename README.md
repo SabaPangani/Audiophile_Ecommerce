@@ -1,5 +1,3 @@
-# NEEDS LITTLE WORK ON CHECKOUT
-
 ## Live link for preview https://sabapangani.github.io/Audophile_Ecommerce/
 
 I don't have access to figma files so design is not pixel perfect
